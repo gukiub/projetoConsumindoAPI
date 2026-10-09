@@ -2,7 +2,6 @@ import React, {
     Component
 } from 'react';
 import api from '../../services/api';
-import {Link} from 'react-router-dom';
 
 import './styles.css';
 
@@ -19,8 +18,6 @@ export default class Main extends Component {
         const response = await api.get('pokemon/');
 
         this.setState({ pokemon: response.data.results });
-
-        console.log(response.data.results);
     };
     
     render() {
